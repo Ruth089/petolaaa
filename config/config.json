@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "udblj1dbohfbte6p",
+    "password": "nEOFFokouCFJvtH0IYJx",
+    "database": "bxu5vpjqa0ukxatdqikp",
+    "host": "bxu5vpjqa0ukxatdqikp-mysql.services.clever-cloud.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "ruth",
+    "password": "Ruthndovia@2020",
+    "database": "Petola_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "udblj1dbohfbte6p",
+    "password": "nEOFFokouCFJvtH0IYJx",
+    "database": "bxu5vpjqa0ukxatdqikp",
+    "host": "bxu5vpjqa0ukxatdqikp-mysql.services.clever-cloud.com",
+    "dialect": "mysql"
+  }
+}
