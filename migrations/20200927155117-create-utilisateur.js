@@ -19,23 +19,11 @@ module.exports = {
         // allowNull: true,
         type: Sequelize.STRING
       },
-      identifiant: {
-        // allowNull: true,
-        type: Sequelize.STRING
-      },
       pwd: {
         // allowNull: false,
         type: Sequelize.STRING
       },
-      type_paiement: {
-        // allowNull: false,
-        type: Sequelize.STRING
-      },
-      numero_carte: {
-        // allowNull: true,
-        type: Sequelize.STRING
-      },
-      code_secret: {
+      pseudonom: {
         // allowNull: false,
         type: Sequelize.STRING
       },

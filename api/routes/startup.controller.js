@@ -16,7 +16,7 @@ router.post("/startups", (req, res) => {
 router.get("/startups", (req, res) => {
     Startup
       .findAll(
-        {include: [db.Employe, db.Tarif, db.Horaire,db.CoordonneStartup]}
+        {include: [db.Tarif, db.Horaire]}
        )
       .then((startups) => {
         return res.send(startups);
@@ -26,8 +26,7 @@ router.get("/startups", (req, res) => {
 router.get("/startups/:id", (req, res) => {
   Startup
     .findAll({where: { id: Number(req.params.id)}, 
-      include: [db.Employe, db.Subscription, db.Horaire,db.CoordonneStartup
-       ]})
+      include: [db.Tarif, db.Horaire]})
     .then((startups) => {
       return res.send(startups);
   })

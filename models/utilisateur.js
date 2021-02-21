@@ -12,7 +12,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.Utilisateur.hasMany(models.Commande);
 
       models.Utilisateur.hasMany(models.Abonnement);
 
@@ -23,11 +22,9 @@ module.exports = (sequelize, DataTypes) => {
   Utilisateur.init({
     nom: DataTypes.STRING,
     prenom: DataTypes.STRING,
-    identifiant: DataTypes.STRING,
     pwd: DataTypes.STRING,
-    type_paiement: DataTypes.STRING,
-    numero_carte: DataTypes.STRING,
-    code_secret: DataTypes.STRING
+    pseudonom: DataTypes.STRING,
+    
   }, 
   {
     hooks: {

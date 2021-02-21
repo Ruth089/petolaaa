@@ -9,16 +9,16 @@ router.post("/utilisateurs", (req, res) => {
     Utilisateur.create({
     nom : req.body.nom,
     prenom : req.body.prenom,
-    identifiant : req.body.identifant,
-    pwd : req.body.pwd
+    pwd : req.body.pwd,
+    pseudonom : req.body.pseudonom
   })
   .then((utilisateurs) => res.status(201).json(utilisateurs))
   .catch((err) => res.status(400).json(err));
 });
-//commmentaire
+
 router.post("/utilisateurs/login", (req, res, next) => {
     Utilisateur
-      .findAll({ where: { identifant: req.body.identifant }})
+      .findAll({ where: { pseudonom: req.body.pseudonom }})
       .then((utilisateur) => {
         if (utilisateur.length < 1) {
           return res.status(404).json({
@@ -31,6 +31,7 @@ router.post("/utilisateurs/login", (req, res, next) => {
               message: "authentification échouée",
             });
           }
+          if (result)
           // if (result) {
           //   const token = jwt.sign(
           //     {
